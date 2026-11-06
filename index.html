@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Valenza Studio | Pilates e Fisioterapia em Garanhuns - PE</title>
+<meta name="description" content="Valenza Studio: Pilates Clássico, Fisioterapia traumato-ortopédica, drenagem linfática e bota pneumática em Garanhuns - PE. R. Pascoal Lopes, 165, Santo Antônio. Agende pelo WhatsApp.">
+<meta property="og:title" content="Valenza · Pilates e Fisioterapia">
+<meta property="og:description" content="Cuidado individual, mais movimento.">
+<meta property="og:image" content="img/studio.jpg">
+<meta name="theme-color" content="#f4ece2">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23c4623e'/%3E%3Ctext x='32' y='46' font-family='Georgia' font-style='italic' font-size='40' text-anchor='middle' fill='%23fff8f0'%3EV%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Pinyon+Script&family=Jost:wght@300;400;500;600&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HealthClub","name":"Valenza Pilates e Fisioterapia","telephone":"+55 87 98159-2039","address":{"@type":"PostalAddress","streetAddress":"R. Pascoal Lopes, 165 - Santo Antônio","addressLocality":"Garanhuns","addressRegion":"PE","postalCode":"55294-490","addressCountry":"BR"},"sameAs":["https://www.instagram.com/valenza.pilates/"]}
+</script>
+<style>
+/* Editorial: creme, cacau, terracota queimado, areia e flores secas. Sem preto. */
+:root{
+  --cream:#f4ece2; --paper:#fbf6f0; --sand:#e9dccb; --sand2:#dcc8b0;
+  --terra:#c4623e; --terra2:#a94f30; --terral:#e3a083; --peach:#f3d5c3;
+  --cocoa:#5b2f24; --cocoa2:#7a4536; --mid:#8a6e62; --line:rgba(91,47,36,.14);
+  --serif:"Gloock",Georgia,serif; --script:"Pinyon Script",cursive; --f:"Jost",system-ui,sans-serif;
+  --ease:cubic-bezier(.7,0,.2,1); --out:cubic-bezier(.2,.8,.2,1); --spring:cubic-bezier(.34,1.5,.64,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+html,body{margin:0}
+body{background:var(--cream);color:var(--cocoa);font-family:var(--f);font-weight:400;font-size:17px;line-height:1.65}
+body.loading{overflow:hidden}
+a{color:inherit}
+button,input,select{font:inherit;color:inherit}
+img{display:block;max-width:100%}
+[hidden]{display:none!important}
+::selection{background:var(--peach)}
+.wrap{max-width:1260px;margin:0 auto;padding-left:max(22px,env(safe-area-inset-left));padding-right:max(22px,env(safe-area-inset-right))}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:.98;margin:0;letter-spacing:-.025em;text-wrap:balance;color:var(--cocoa)}
+h2{font-size:clamp(42px,6vw,88px)}
+h3{font-size:30px;letter-spacing:-.015em}
+p{margin:0}
+.tt{color:var(--terra)}
+.eb{display:flex;align-items:center;gap:14px;font-size:12.5px;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:var(--cocoa2)}
+.eb b{font-weight:500;color:var(--terra);letter-spacing:.1em}
+.eb::after{content:"";flex:1;max-width:120px;height:1px;background:var(--line)}
+.pad{padding-block:clamp(90px,11vw,150px)}
+
+/* ===== Abertura 0–100 ===== */
+.loader{position:fixed;inset:0;z-index:500;display:grid;place-items:center;background:var(--cream);transition:transform 1.1s var(--ease)}
+.loader.go{transform:translateY(-100%)}
+.ld{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;width:min(520px,86vw)}
+.ld .v{font-family:var(--script);font-size:clamp(130px,30vw,200px);line-height:.9;color:var(--terra);clip-path:inset(0 calc(100% - var(--p,0%)) 0 0);transition:clip-path .15s linear}
+.ld .wm{font-family:var(--serif);font-size:clamp(28px,7vw,44px);letter-spacing:.32em;padding-left:.32em;display:flex}
+.ld .wm span{opacity:.15;transition:opacity .4s,color .4s}
+.ld .wm span.on{opacity:1}
+.ld .sb{font-size:11px;font-weight:500;letter-spacing:.4em;text-transform:uppercase;color:var(--mid);padding-left:.4em}
+.ld .row{display:flex;align-items:center;gap:16px;width:100%;margin-top:22px;font-size:13px;letter-spacing:.12em;color:var(--terra);font-variant-numeric:tabular-nums}
+.ld .row i{flex:1;height:1px;background:var(--line);position:relative;overflow:hidden}
+.ld .row i::after{content:"";position:absolute;inset:0;background:var(--terra);transform:scaleX(var(--s,0));transform-origin:left}
+
+/* ===== Topo ===== */
+.nav{position:fixed;inset:0 0 auto;z-index:60;padding-block:16px;transition:padding .4s,background .4s,box-shadow .4s}
+.nav.solid{padding-block:9px;background:rgba(244,236,226,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;text-decoration:none}
+.brand img{height:44px;width:auto}
+.links{display:flex;gap:30px;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+.links a{text-decoration:none;position:relative;overflow:hidden;display:inline-block;height:1.6em}
+.links a span{display:block;transition:transform .5s var(--ease)}
+.links a span::after{content:attr(data-t);display:block;color:var(--terra)}
+.links a:hover span{transform:translateY(-50%)}
+@media(max-width:1040px){.links{display:none}}
+.btn{--x:0px;--y:0px;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:17px 30px;border-radius:2px;border:0;cursor:pointer;font-weight:500;font-size:14px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;white-space:nowrap;position:relative;overflow:hidden;isolation:isolate;transform:translate(var(--x),var(--y));transition:transform .4s var(--out),color .4s}
+.btn::before{content:"";position:absolute;inset:0;z-index:-1;transform:scaleX(0);transform-origin:right;transition:transform .6s var(--ease)}
+.btn:hover::before{transform:scaleX(1);transform-origin:left}
+.btn svg{width:18px;height:18px;flex:none}
+.btn.t{background:var(--terra);color:var(--paper)}
+.btn.t::before{background:var(--cocoa)}
+.btn.l{background:transparent;color:var(--cocoa);box-shadow:inset 0 0 0 1px var(--cocoa)}
+.btn.l::before{background:var(--cocoa)}
+.btn.l:hover{color:var(--paper)}
+.btn.p{background:var(--paper);color:var(--terra2)}
+.btn.p::before{background:var(--peach)}
+.btn .ar{transition:transform .4s var(--out)}
+.btn:hover .ar{transform:translateX(5px)}
+.btn:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--terra);outline-offset:3px}
+.nav .btn{padding:12px 18px;font-size:12.5px}
+@media(max-width:560px){.nav .btn span{display:none}.nav .btn{padding:12px}.brand img{height:36px}}
+
+/* ===== Hero editorial ===== */
+.hero{position:relative;min-height:100vh;min-height:100svh;padding-block:120px 40px;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+.hgrid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,4vw,60px);align-items:end}
+.htx{display:flex;flex-direction:column;gap:26px}
+.hero h1{font-size:clamp(54px,8.4vw,132px);line-height:.92}
+.hero h1 .ln{display:block;overflow:hidden}
+.hero h1 .ln>span{display:inline-block;transform:translateY(105%)}
+.ready .hero h1 .ln>span{animation:up 1.2s var(--out) forwards;animation-delay:calc(var(--i)*.12s + .2s)}
+@keyframes up{to{transform:none}}
+.hero h1 em{font-family:var(--script);font-style:normal;color:var(--terra);font-size:1.12em;letter-spacing:0;line-height:.6}
+.hero .lead{max-width:44ch;color:var(--mid);font-size:clamp(17px,1.35vw,19px);font-weight:300}
+.fx{opacity:0;transform:translateY(20px)}
+.ready .fx{animation:fin 1s var(--out) forwards;animation-delay:var(--d,.6s)}
+@keyframes fin{to{opacity:1;transform:none}}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.hph{position:relative;align-self:stretch;min-height:460px}
+.hph .im{position:absolute;inset:0;overflow:hidden;border-radius:300px 300px 4px 4px;clip-path:inset(100% 0 0 0);background:var(--sand)}
+.ready .hph .im{animation:wipe 1.4s var(--ease) .3s forwards}
+@keyframes wipe{to{clip-path:inset(0 0 0 0)}}
+.hph img{width:100%;height:100%;object-fit:cover;object-position:35% 50%;transform:scale(1.25) translateY(var(--py,0px));transition:transform 2s var(--out)}
+.ready .hph img{transform:scale(1.05) translateY(var(--py,0px))}
+.hph .cnt{position:absolute;right:16px;top:16px;z-index:2;padding:6px 14px;border-radius:999px;background:rgba(91,47,36,.75);color:var(--paper);font-size:13px;letter-spacing:.1em}
+.hph .bad{position:absolute;left:-36px;bottom:40px;z-index:2;width:118px;height:118px;border-radius:50%;background:var(--terra);color:var(--paper);display:grid;place-items:center;font-family:var(--script);font-size:66px;line-height:1;box-shadow:0 20px 40px -18px rgba(169,79,48,.7)}
+.hph .bad svg{position:absolute;inset:0;width:100%;height:100%;animation:rot 20s linear infinite}
+@keyframes rot{to{transform:rotate(360deg)}}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:clamp(36px,5vw,60px);border-top:1px solid var(--line)}
+.facts div{padding:20px 20px 0 0;display:flex;flex-direction:column;gap:2px}
+.facts div+div{padding-left:20px;border-left:1px solid var(--line)}
+.facts b{font-family:var(--serif);font-weight:400;font-size:clamp(26px,2.6vw,36px);line-height:1;color:var(--terra)}
+.facts small{font-size:13px;letter-spacing:.06em;color:var(--mid)}
+@media(max-width:900px){.hgrid{grid-template-columns:1fr}.hph{order:-1;min-height:0;aspect-ratio:4/3.4;width:100%}.hph .bad{left:auto;right:16px;bottom:-30px;width:96px;height:96px;font-size:54px}.facts{grid-template-columns:1fr 1fr}.facts div:nth-child(3){padding-left:0;border-left:0}.facts div{padding-bottom:16px}}
+
+/* faixa */
+.mq{border-block:1px solid var(--line);overflow:hidden;padding-block:22px;background:var(--paper)}
+.mq .tr{display:flex;width:max-content;animation:mq 45s linear infinite}
+.mq span{font-family:var(--serif);font-size:clamp(28px,3.2vw,44px);padding-inline:28px;white-space:nowrap;display:flex;align-items:center;gap:56px}
+.mq span:nth-child(even){font-family:var(--script);color:var(--terra);font-size:clamp(38px,4vw,56px)}
+.mq span::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--terral)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ===== Serviços em carrossel (estilo post) ===== */
+.sh{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:46px}
+.sh .l{display:flex;flex-direction:column;gap:20px;max-width:780px}
+.sh p{color:var(--mid);max-width:40ch;font-weight:300}
+.car{position:relative}
+.slides{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:4px;cursor:grab;padding-left:max(22px,calc((100vw - 1260px)/2 + 22px));padding-right:22px;scroll-padding-left:max(22px,calc((100vw - 1260px)/2 + 22px))}
+.slides::-webkit-scrollbar{display:none}
+.slides.drag{cursor:grabbing;scroll-snap-type:none}
+.sl{flex:none;width:min(420px,82vw);aspect-ratio:4/5;scroll-snap-align:start;position:relative;padding:34px 30px;display:flex;flex-direction:column;background:var(--paper);box-shadow:inset 0 0 0 1px var(--line);overflow:hidden;user-select:none}
+.sl .no{display:flex;justify-content:space-between;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--mid)}
+.sl h3{font-size:clamp(40px,3.6vw,52px);margin-top:auto}
+.sl h3 em{font-family:var(--script);font-style:normal;color:var(--terra);font-size:1.15em;letter-spacing:0}
+.sl p{color:var(--mid);font-weight:300;font-size:15.5px;margin-top:14px}
+.sl .go{margin-top:20px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--terra2);text-decoration:none;font-weight:500}
+.sl.dk{background:var(--terra);color:var(--paper);box-shadow:none}
+.sl.dk h3,.sl.dk .no{color:var(--paper)}
+.sl.dk h3 em{color:var(--peach)}
+.sl.dk p{color:rgba(251,246,240,.85)}
+.sl.dk .go{color:var(--peach)}
+.sl.im{padding:0}
+.sl.im img{width:100%;height:100%;object-fit:cover;pointer-events:none;transition:transform 1.2s var(--out)}
+.sl.im:hover img{transform:scale(1.06)}
+.sl.im .cap{position:absolute;left:0;right:0;bottom:0;padding:24px 28px;background:linear-gradient(transparent,rgba(91,47,36,.7));color:var(--paper);font-family:var(--serif);font-size:28px;line-height:1.05}
+.sl .ic{width:64px;height:64px;border-radius:50%;box-shadow:inset 0 0 0 1px currentColor;display:grid;place-items:center;margin-top:28px;color:var(--terra)}
+.sl.dk .ic{color:var(--peach)}
+.sl .ic svg{width:30px;height:30px}
+.cctl{display:flex;align-items:center;gap:18px;margin-top:26px}
+.cctl button{width:54px;height:54px;border-radius:50%;border:0;background:var(--paper);box-shadow:inset 0 0 0 1px var(--line);cursor:pointer;font-size:20px;color:var(--cocoa);transition:background .3s,color .3s}
+.cctl button:hover{background:var(--terra);color:var(--paper)}
+.cctl .cnt{font-family:var(--serif);font-size:22px;font-variant-numeric:tabular-nums}
+.cctl .cnt b{font-weight:400;color:var(--terra)}
+.dots{display:flex;gap:6px;margin-left:auto}
+.dots i{width:7px;height:7px;border-radius:50%;background:var(--sand2);transition:background .3s,width .4s var(--out)}
+.dots i.on{background:var(--terra);width:22px;border-radius:4px}
+
+/* ===== Bota pneumática ===== */
+.bota{background:var(--paper);border-block:1px solid var(--line)}
+.bgrid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,90px);align-items:center}
+.bvis{position:relative}
+.bvis svg{width:100%;height:auto;overflow:visible}
+.bvis .ch{fill:var(--sand);transition:fill .45s}
+.bvis .ch.on{fill:var(--terral)}
+.bvis .flow path{stroke-dasharray:4 10;animation:flw 2s linear infinite}
+@keyframes flw{to{stroke-dashoffset:-56}}
+.bvis .ph{margin-top:20px;display:grid;grid-template-columns:1.3fr 1fr;gap:12px}
+.bvis .ph div{border-radius:4px;overflow:hidden;aspect-ratio:16/10}
+.bvis .ph img{width:100%;height:100%;object-fit:cover}
+.btx{display:flex;flex-direction:column;gap:20px}
+.btx p{color:var(--mid);font-weight:300}
+.btx .hl{font-family:var(--serif);font-size:clamp(22px,2vw,28px);line-height:1.2;color:var(--terra)}
+.ben{list-style:none;margin:0;padding:0}
+.ben li{display:flex;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line);font-family:var(--serif);font-size:clamp(21px,1.9vw,26px);line-height:1.2}
+.ben li::before{content:"";flex:none;width:6px;height:28px;background:var(--terra)}
+.btx small{font-size:13px;color:var(--mid)}
+@media(max-width:900px){.bgrid{grid-template-columns:1fr}}
+
+/* ===== Cartões empilhados ===== */
+.stack{display:flex;flex-direction:column;gap:0}
+.sc{position:sticky;top:calc(90px + var(--i)*22px);min-height:min(560px,76vh);margin-bottom:40px;border-radius:6px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;background:var(--paper);box-shadow:0 -1px 0 var(--line),0 30px 60px -40px rgba(91,47,36,.5);transform-origin:center top}
+.sc:nth-child(2){background:var(--sand)}
+.sc:nth-child(3){background:var(--terra);color:var(--paper)}
+.sc:nth-child(3) h3{color:var(--paper)}
+.sc:nth-child(3) p{color:rgba(251,246,240,.85)}
+.sc:nth-child(3) .k{color:var(--peach)}
+.sc .bd{padding:clamp(28px,4vw,56px);display:flex;flex-direction:column;gap:18px;justify-content:center}
+.sc .k{font-size:12.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--terra)}
+.sc h3{font-size:clamp(40px,4.4vw,64px)}
+.sc p{color:var(--mid);font-weight:300;max-width:42ch}
+.sc .im{position:relative;overflow:hidden;min-height:300px}
+.sc .im img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+@media(max-width:820px){.sc{grid-template-columns:1fr;top:calc(76px + var(--i)*14px)}.sc .im{order:-1;min-height:220px;aspect-ratio:16/10}}
+
+/* ===== Maria Clara ===== */
+.mc{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,90px);align-items:center}
+.mcim{position:relative;min-height:540px}
+.mcim .a{position:absolute;left:0;top:0;width:70%;height:78%;overflow:hidden;border-radius:300px 300px 4px 4px}
+.mcim .b{position:absolute;right:0;bottom:0;width:48%;height:46%;overflow:hidden;border-radius:4px;box-shadow:0 0 0 10px var(--cream)}
+.mcim img{width:100%;height:100%;object-fit:cover;transform:scale(1.12) translateY(var(--py,0px))}
+.mcim .sig{position:absolute;left:6%;bottom:2%;font-family:var(--script);font-size:clamp(52px,6vw,78px);color:var(--terra);line-height:1;transform:rotate(-6deg)}
+.mc .tx{display:flex;flex-direction:column;gap:20px}
+.mc .tx p{color:var(--mid);font-weight:300}
+.mc blockquote{margin:0;font-family:var(--serif);font-size:clamp(24px,2.4vw,32px);line-height:1.22;padding-left:22px;border-left:1px solid var(--terra)}
+@media(max-width:900px){.mc{grid-template-columns:1fr}.mcim{min-height:auto;aspect-ratio:1/1.05}}
+
+/* ===== Galeria / clima ===== */
+.ig{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.ig a{position:relative;aspect-ratio:1;overflow:hidden;background:var(--sand);display:block}
+.ig a:nth-child(1){grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
+.ig img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--out),filter .6s}
+.ig a::after{content:"Ver no Instagram";position:absolute;inset:0;display:grid;place-items:center;background:rgba(196,98,62,.72);color:var(--paper);font-size:13px;letter-spacing:.2em;text-transform:uppercase;opacity:0;transition:opacity .4s}
+.ig a:hover::after{opacity:1}
+.ig a:hover img{transform:scale(1.08)}
+@media(max-width:700px){.ig{grid-template-columns:1fr 1fr}}
+.igh{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-top:22px}
+.igh .h{display:flex;align-items:center;gap:14px}
+.igh .h img{height:40px}
+.igh b{font-family:var(--serif);font-weight:400;font-size:26px;color:var(--terra)}
+.igh small{display:block;color:var(--mid);font-size:13.5px}
+
+/* ===== Agendar ===== */
+.ag{background:var(--terra);color:var(--paper)}
+.agg{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,6vw,90px);align-items:center}
+.ag h2{color:var(--paper)}
+.ag h2 em{font-family:var(--script);font-style:normal;color:var(--peach);font-size:1.15em;letter-spacing:0}
+.ag .eb{color:var(--peach)}
+.ag .eb::after{background:rgba(255,255,255,.3)}
+.ag .tx{display:flex;flex-direction:column;gap:22px}
+.ag .tx p{opacity:.88;font-weight:300}
+.form{background:var(--paper);color:var(--cocoa);padding:clamp(24px,3.4vw,42px);border-radius:4px;display:grid;gap:18px}
+.f{display:flex;flex-direction:column;gap:8px;min-width:0}
+.f label,.f .lb{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--mid)}
+.f input{border:0;border-bottom:1px solid var(--line);background:transparent;padding:10px 0;font-size:17px;border-radius:0}
+.f input:focus{outline:none;border-color:var(--terra)}
+.ch2{display:flex;flex-wrap:wrap;gap:8px}
+.ch2 button{border:0;cursor:pointer;padding:10px 16px;border-radius:999px;background:var(--cream);box-shadow:inset 0 0 0 1px var(--line);font-size:14.5px;transition:background .3s,color .3s}
+.ch2 button.on{background:var(--cocoa);color:var(--paper);box-shadow:none}
+@media(max-width:900px){.agg{grid-template-columns:1fr}}
+
+/* ===== FAQ ===== */
+.faq{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(30px,6vw,90px);align-items:start}
+.qa{border-top:1px solid var(--line)}
+.qa:last-child{border-bottom:1px solid var(--line)}
+.qa button{width:100%;display:grid;grid-template-columns:44px 1fr 30px;align-items:center;gap:10px;padding:24px 0;background:none;border:0;cursor:pointer;text-align:left}
+.qa .n{font-size:13px;letter-spacing:.14em;color:var(--terra)}
+.qa .q{font-family:var(--serif);font-size:clamp(21px,2vw,27px);line-height:1.2}
+.qa .pl{position:relative;width:22px;height:22px;justify-self:end}
+.qa .pl::before,.qa .pl::after{content:"";position:absolute;left:0;right:0;top:50%;height:1.5px;background:var(--cocoa);transition:transform .5s var(--ease)}
+.qa .pl::after{transform:rotate(90deg)}
+.qa.on .pl::after{transform:rotate(0)}
+.qa .an{display:grid;grid-template-rows:0fr;transition:grid-template-rows .6s var(--ease)}
+.qa.on .an{grid-template-rows:1fr}
+.qa .an>div{overflow:hidden}
+.qa .an p{padding:0 0 24px 54px;color:var(--mid);font-weight:300;max-width:62ch}
+@media(max-width:900px){.faq{grid-template-columns:1fr}.qa .an p{padding-left:0}}
+
+/* ===== Local ===== */
+.loc{display:grid;grid-template-columns:.85fr 1.15fr;background:var(--paper);box-shadow:inset 0 0 0 1px var(--line);border-radius:4px;overflow:hidden}
+.loc .info{padding:clamp(28px,4vw,52px);display:flex;flex-direction:column;gap:20px;min-width:0}
+.li{display:flex;flex-direction:column;gap:4px;padding-bottom:18px;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+.li small{font-size:11.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--terra)}
+.li span,.li a{font-family:var(--serif);font-size:clamp(20px,1.8vw,24px);line-height:1.25;text-decoration:none}
+.map{position:relative;min-height:540px;background:var(--sand)}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:sepia(.2) saturate(.9)}
+@media(max-width:900px){.loc{grid-template-columns:1fr}.map{min-height:360px}}
+
+/* ===== Final ===== */
+.final{text-align:center;padding-block:clamp(110px,14vw,190px);position:relative;overflow:hidden}
+.final .wrap{display:flex;flex-direction:column;align-items:center;gap:26px;position:relative;z-index:2}
+.final h2{font-size:clamp(52px,8.4vw,128px)}
+.final h2 em{font-family:var(--script);font-style:normal;color:var(--terra);font-size:1.12em;letter-spacing:0}
+.final p{color:var(--mid);max-width:44ch;font-weight:300}
+.final .bigv{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) scale(var(--sv,.9));font-family:var(--script);font-size:min(70vw,780px);line-height:1;color:var(--sand);opacity:.6;pointer-events:none;z-index:0}
+.icons{display:flex;gap:clamp(16px,3vw,34px);justify-content:center;flex-wrap:wrap}
+.icons a{display:flex;flex-direction:column;align-items:center;gap:8px;text-decoration:none;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--mid)}
+.icons span{width:70px;height:70px;border-radius:50%;box-shadow:inset 0 0 0 1px var(--terra);display:grid;place-items:center;color:var(--terra);transition:background .35s,color .35s,transform .5s var(--spring)}
+.icons a:hover span{background:var(--terra);color:var(--paper);transform:translateY(-4px)}
+.icons svg{width:28px;height:28px}
+footer{background:var(--cocoa);color:rgba(251,246,240,.75);padding-block:34px;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center}
+footer .wm{font-family:var(--serif);font-size:22px;letter-spacing:.3em;color:var(--paper)}
+footer a{text-decoration:none}
+footer a:hover{color:var(--peach)}
+
+.js .rv{opacity:0;transform:translateY(44px);transition:opacity 1.1s var(--out),transform 1.1s var(--out)}
+.js .rv.on{opacity:1;transform:none}
+.js .rv.d1{transition-delay:.1s}.js .rv.d2{transition-delay:.2s}.js .rv.d3{transition-delay:.3s}
+.js .wp{clip-path:inset(0 0 100% 0);transition:clip-path 1.3s var(--ease)}
+.js .wp.on{clip-path:inset(0 0 0 0)}
+
+/* ===== Assistente (esquerda) ===== */
+.abt{position:fixed;left:max(18px,env(safe-area-inset-left));bottom:max(18px,env(safe-area-inset-bottom));z-index:90;display:flex;align-items:center;gap:12px;border:0;cursor:pointer;padding:7px 20px 7px 7px;border-radius:999px;background:var(--paper);box-shadow:0 0 0 1px var(--line),0 22px 44px -18px rgba(91,47,36,.55);text-align:left;line-height:1.2;transition:transform .4s var(--spring)}
+.abt:hover{transform:translateY(-3px)}
+.abt .av{position:relative;width:46px;height:46px;border-radius:50%;background:var(--terra);display:grid;place-items:center;flex:none;font-family:var(--script);font-size:30px;color:var(--paper);line-height:1;padding-top:4px}
+.abt .av::after{content:"";position:absolute;right:0;bottom:0;width:11px;height:11px;border-radius:50%;background:#7fcf9c;border:2px solid var(--paper)}
+.abt b{display:block;font-weight:500;font-size:14.5px}
+.abt small{font-size:12px;color:var(--mid)}
+.as{position:fixed;left:max(14px,env(safe-area-inset-left));bottom:calc(max(18px,env(safe-area-inset-bottom)) + 74px);z-index:91;width:min(400px,calc(100vw - 28px));max-height:min(640px,calc(100svh - 120px));display:flex;flex-direction:column;border-radius:20px;background:var(--paper);overflow:hidden;box-shadow:0 0 0 1px var(--line),0 50px 90px -30px rgba(91,47,36,.6);transform-origin:bottom left;animation:apop .5s var(--spring)}
+@keyframes apop{from{opacity:0;transform:scale(.86) translateY(16px)}}
+.as header{display:flex;align-items:center;gap:12px;padding:16px;background:var(--cocoa);color:var(--paper)}
+.as header .av{width:42px;height:42px;border-radius:50%;background:var(--terra);display:grid;place-items:center;font-family:var(--script);font-size:28px;line-height:1;padding-top:4px}
+.as header b{display:block;font-family:var(--serif);font-weight:400;font-size:20px;line-height:1.1}
+.as header small{display:flex;align-items:center;gap:6px;font-size:12.5px;opacity:.85}
+.as header small::before{content:"";width:7px;height:7px;border-radius:50%;background:#9fe0b8}
+.as header button{margin-left:auto;width:34px;height:34px;border-radius:50%;border:0;cursor:pointer;background:rgba(255,255,255,.14);color:var(--paper);font-size:18px}
+.msgs{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;background:var(--cream);font-size:15px;line-height:1.55}
+.m{max-width:88%;padding:11px 15px;border-radius:18px;opacity:0;transform:translateY(8px);animation:fin .4s var(--out) forwards}
+.m.b{background:var(--paper);border-bottom-left-radius:5px;box-shadow:0 0 0 1px var(--line)}
+.m.u{background:var(--terra);color:var(--paper);align-self:flex-end;border-bottom-right-radius:5px}
+.m a{color:var(--terra2);font-weight:500}
+.m b{font-weight:600}
+.typing{display:flex;gap:5px;padding:15px 16px}
+.typing i{width:6px;height:6px;border-radius:50%;background:var(--terra);animation:dt 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes dt{50%{transform:translateY(-5px);opacity:.4}}
+.qk{display:flex;gap:7px;padding:10px 12px;overflow-x:auto;border-top:1px solid var(--line);scrollbar-width:none;background:var(--paper)}
+.qk::-webkit-scrollbar{display:none}
+.qk button{flex:none;border:0;cursor:pointer;padding:8px 13px;border-radius:999px;background:var(--cream);box-shadow:inset 0 0 0 1px var(--line);font-size:13.5px;transition:background .25s}
+.qk button:hover{background:var(--peach)}
+.as form{display:flex;gap:8px;padding:12px;background:var(--paper)}
+.as input{flex:1;min-width:0;border:0;border-radius:999px;padding:12px 16px;background:var(--cream);box-shadow:inset 0 0 0 1px var(--line);font-size:15px}
+.as form button{width:46px;height:46px;border-radius:50%;border:0;background:var(--terra);color:var(--paper);cursor:pointer;display:grid;place-items:center;flex:none}
+
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.js .rv,.fx{opacity:1;transform:none}.hero h1 .ln>span{transform:none}.hph .im,.js .wp{clip-path:none}.sc{position:relative;top:auto}}
+</style>
+</head>
+<body class="loading">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.2 1.2Z"/></symbol>
+</defs></svg>
+
+<!-- ABERTURA 0-100 -->
+<div class="loader" id="loader" aria-hidden="true"><div class="ld">
+  <div class="v" id="ldV">V</div>
+  <div class="wm" id="ldW"><span>V</span><span>A</span><span>L</span><span>E</span><span>N</span><span>Z</span><span>A</span></div>
+  <div class="sb">Pilates e Fisioterapia</div>
+  <div class="row"><span id="ldN">000</span><i id="ldB"></i><span>100</span></div>
+</div></div>
+
+<nav class="nav" id="nav"><div class="wrap">
+  <a class="brand" href="#inicio" aria-label="Valenza Studio, início"><img src="img/logo.png" alt="Valenza Studio"></a>
+  <div class="links"><a href="#servicos"><span data-t="Serviços">Serviços</span></a><a href="#bota"><span data-t="Bota pneumática">Bota pneumática</span></a><a href="#pilates"><span data-t="Pilates">Pilates</span></a><a href="#maria-clara"><span data-t="Maria Clara">Maria Clara</span></a><a href="#contato"><span data-t="Contato">Contato</span></a></div>
+  <a class="btn t wa" href="#" data-msg="Olá, Valenza! Vim pelo site e gostaria de agendar uma avaliação."><svg><use href="#i-wa"/></svg><span>Agendar</span></a>
+</div></nav>
+
+<header class="hero" id="inicio"><div class="wrap">
+  <div class="hgrid">
+    <div class="htx">
+      <span class="eb fx" style="--d:.1s"><b>01</b>Pilates e Fisioterapia · Garanhuns</span>
+      <h1 id="h1"><span class="ln"><span style="--i:0">Cuidado</span></span><span class="ln"><span style="--i:1">individual,</span></span><span class="ln"><span style="--i:2">mais <em>movimento.</em></span></span></h1>
+      <p class="lead fx" style="--d:.8s">Pilates Clássico, Fisioterapia traumato-ortopédica, drenagem linfática e bota pneumática em um studio acolhedor, com atendimento individualizado do começo ao fim.</p>
+      <div class="cta fx" style="--d:.95s"><a class="btn t wa" href="#" data-msg="Olá, Valenza! Vim pelo site e gostaria de agendar uma avaliação."><svg><use href="#i-wa"/></svg>Agendar avaliação <span class="ar">→</span></a><a class="btn l" href="#servicos">Ver serviços</a></div>
+    </div>
+    <div class="hph">
+      <div class="im"><img id="himg" src="img/studio.jpg" alt="Sala do Valenza Studio com aparelhos de Pilates em madeira" fetchpriority="high"></div>
+      <span class="cnt fx" style="--d:1.2s">01 / 05</span>
+      <div class="bad fx" style="--d:1.3s"><svg viewBox="0 0 120 120" aria-hidden="true"><defs><path id="cp" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs><text font-family="Jost" font-size="9.5" font-weight="500" letter-spacing="3.4" fill="#fbf6f0"><textPath href="#cp">VALENZA · PILATES E FISIOTERAPIA · </textPath></text></svg>V</div>
+    </div>
+  </div>
+  <div class="facts fx" style="--d:1.1s"><div><b>Clássico</b><small>Pilates fiel ao método</small></div><div><b>1:1</b><small>atenção individual</small></div><div><b>+3,4 mil</b><small>seguidores no Instagram</small></div><div><b>até 20h</b><small>atendimento com hora marcada</small></div></div>
+</div></header>
+
+<div class="mq" aria-hidden="true"><div class="tr" id="mq"><span>Pilates Clássico</span><span>leveza</span><span>Fisioterapia</span><span>cuidado</span><span>Drenagem linfática</span><span>movimento</span><span>Bota pneumática</span><span>bem-estar</span></div></div>
+
+<section class="pad" id="servicos">
+  <div class="wrap"><div class="sh"><div class="l"><span class="eb rv"><b>02</b>Serviços</span><h2 class="rv d1">Seu cuidado <span class="tt">começa aqui.</span></h2></div><p class="rv d2">Arraste para o lado e conheça cada serviço. O plano de cuidado é sempre individualizado, conforme avaliação.</p></div></div>
+  <div class="car rv">
+    <div class="slides" id="slides">
+      <article class="sl dk"><div class="no"><span>Valenza</span><span>01 / 06</span></div><span class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="16" cy="7" r="3"/><path d="M6 26c4-1 6-5 10-12 4 7 6 11 10 12M10 18h12"/></svg></span><h3>Pilates <em>Clássico</em></h3><p>O método em sua essência: controle, precisão e respiração para fortalecer o corpo de dentro para fora.</p><a class="go wa" href="#" data-msg="Olá, Valenza! Tenho interesse no Pilates Clássico.">Quero começar →</a></article>
+      <article class="sl"><div class="no"><span>Valenza</span><span>02 / 06</span></div><span class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M10 4v8a6 6 0 0 0 12 0V4M16 18v10M11 28h10"/></svg></span><h3>Fisioterapia <em>traumato-ortopédica</em></h3><p>Tratamento de dores, lesões e recuperação de movimentos, com plano individual.</p><a class="go wa" href="#" data-msg="Olá, Valenza! Gostaria de saber sobre a fisioterapia traumato-ortopédica.">Saber mais →</a></article>
+      <article class="sl im"><img src="img/pose.jpg" alt="Aluna em postura de alongamento no studio" draggable="false" loading="lazy"><span class="cap">Movimento com consciência</span></article>
+      <article class="sl"><div class="no"><span>Valenza</span><span>03 / 06</span></div><span class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M16 4s8 9 8 15a8 8 0 0 1-16 0c0-6 8-15 8-15Z"/><path d="M12 20c1 2 3 3 5 3"/></svg></span><h3>Drenagem <em>linfática</em></h3><p>Estimula a circulação linfática e traz sensação de leveza para o corpo.</p><a class="go wa" href="#" data-msg="Olá, Valenza! Tenho interesse em drenagem linfática.">Agendar →</a></article>
+      <article class="sl dk"><div class="no"><span>Valenza</span><span>04 / 06</span></div><span class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M11 3h8v18l5 4v3H11Z"/><path d="M11 8h8M11 13h8M11 18h8"/></svg></span><h3>Bota <em>pneumática</em></h3><p>Câmaras que enchem e esvaziam em sequência, auxiliando o retorno venoso e linfático.</p><a class="go" href="#bota">Como funciona →</a></article>
+      <article class="sl"><div class="no"><span>Valenza</span><span>05 / 06</span></div><span class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M16 28S5 21 5 12a6 6 0 0 1 11-3 6 6 0 0 1 11 3c0 9-11 16-11 16Z"/></svg></span><h3>Cuidado no <em>lipedema</em></h3><p>Drenagem linfática e bota pneumática podem integrar o cuidado do lipedema, conforme avaliação.</p><a class="go wa" href="#" data-msg="Olá, Valenza! Gostaria de saber sobre o cuidado para lipedema.">Agendar avaliação →</a></article>
+      <article class="sl im"><img src="img/studio.jpg" alt="Aparelhos de Pilates do Valenza" draggable="false" loading="lazy" style="object-position:30% 50%"><span class="cap">06 / 06 · Nosso studio</span></article>
+    </div>
+    <div class="wrap cctl"><button type="button" id="cPrev" aria-label="Anterior">←</button><button type="button" id="cNext" aria-label="Próximo">→</button><span class="cnt"><b id="cI">01</b> / <span id="cT">07</span></span><div class="dots" id="dots"></div></div>
+  </div>
+</section>
+
+<section class="bota pad" id="bota"><div class="wrap bgrid">
+  <div class="bvis rv">
+    <svg viewBox="0 0 400 300" role="img" aria-label="Ilustração da bota pneumática com câmaras enchendo em sequência">
+      <g class="flow" fill="none" stroke="#e3a083" stroke-width="1.6"><path d="M0 250C80 220 160 270 240 240S360 200 400 210"/><path d="M0 266C90 240 170 286 250 258S360 220 400 228"/></g>
+      <g id="boot" transform="translate(70 20)">
+        <path d="M60 0h110v190c0 10 8 18 18 22l60 22c14 5 14 30-4 30H70c-10 0-14-6-14-14Z" fill="#fbf6f0" stroke="#7a4536" stroke-width="2"/>
+        <rect class="ch" x="68" y="10" width="94" height="28" rx="8"/>
+        <rect class="ch" x="68" y="44" width="94" height="28" rx="8"/>
+        <rect class="ch" x="68" y="78" width="94" height="28" rx="8"/>
+        <rect class="ch" x="68" y="112" width="94" height="28" rx="8"/>
+        <rect class="ch" x="68" y="146" width="94" height="28" rx="8"/>
+        <path class="ch" d="M70 182h92c4 18 18 30 40 36l40 14c6 2 6 14-2 14H78c-6 0-8-4-8-8Z"/>
+      </g>
+      <g fill="#c4623e"><path id="arr" d="M300 210 300 50" stroke="#c4623e" stroke-width="2" stroke-dasharray="6 6"/><path d="M292 60 300 44 308 60Z"/></g>
+      <text x="314" y="130" font-family="Jost" font-size="12" fill="#8a6e62" letter-spacing="1.5">RETORNO</text><text x="314" y="146" font-family="Jost" font-size="12" fill="#8a6e62" letter-spacing="1.5">VENOSO E</text><text x="314" y="162" font-family="Jost" font-size="12" fill="#8a6e62" letter-spacing="1.5">LINFÁTICO</text>
+    </svg>
+    <div class="ph"><div><img src="img/bota-sofa.jpg" alt="Bota pneumática em uso, pernas sobre o sofá" loading="lazy"></div><div><img src="img/bota.jpg" alt="Bota pneumática e seu aparelho" loading="lazy"></div></div>
+  </div>
+  <div class="btx">
+    <span class="eb rv"><b>03</b>Bota pneumática</span>
+    <h2 class="rv d1">Como ela <span class="tt">funciona?</span></h2>
+    <p class="rv d2">As câmaras da bota enchem e esvaziam de forma sequencial, comprimindo as pernas, dos pés em direção às coxas.</p>
+    <p class="hl rv d2">Esse movimento auxilia o retorno venoso e linfático.</p>
+    <p class="rv d2" style="color:var(--cocoa)">Quando indicada, a bota pode ajudar a:</p>
+    <ul class="ben rv d3"><li>Aliviar a sensação de peso</li><li>Reduzir o desconforto nas pernas</li><li>Controlar o inchaço associado, quando presente</li></ul>
+    <small class="rv d3">No lipedema, não elimina a gordura: é um recurso complementar, com indicação individual.</small>
+    <a class="btn t wa rv d3" style="align-self:flex-start" href="#" data-msg="Olá, Valenza! Gostaria de saber sobre a bota pneumática."><svg><use href="#i-wa"/></svg>Quero experimentar <span class="ar">→</span></a>
+  </div>
+</div></section>
+
+<section class="pad" id="pilates"><div class="wrap">
+  <div class="sh"><div class="l"><span class="eb rv"><b>04</b>A experiência Valenza</span><h2 class="rv d1">Feito para você se <span class="tt">sentir mais leve.</span></h2></div></div>
+  <div class="stack">
+    <article class="sc" style="--i:0"><div class="bd"><span class="k">Individual</span><h3>Cuidado individual</h3><p>Cada aluno é avaliado e acompanhado de perto. Nada de exercícios genéricos: o seu plano respeita o seu corpo, a sua história e os seus objetivos.</p></div><div class="im"><img src="img/selfie.jpg" alt="Fisioterapeuta no studio Valenza" loading="lazy" style="object-position:50% 30%"></div></article>
+    <article class="sc" style="--i:1"><div class="bd"><span class="k">Método</span><h3>Pilates Clássico</h3><p>Fiel aos princípios do método: controle, centro, concentração, precisão, respiração e fluidez. Aparelhos em madeira e um ambiente pensado para o foco.</p></div><div class="im"><img src="img/studio.jpg" alt="Reformer e aparelhos de Pilates clássico" loading="lazy" style="object-position:40% 50%"></div></article>
+    <article class="sc" style="--i:2"><div class="bd"><span class="k">Bem-estar</span><h3>Mais movimento, menos incômodo</h3><p>Fisioterapia, drenagem e bota pneumática se somam ao Pilates para você se sentir mais leve no dia a dia.</p><a class="btn p wa" style="align-self:flex-start" href="#" data-msg="Olá, Valenza! Quero me sentir mais leve. Como posso começar?">Começar agora <span class="ar">→</span></a></div><div class="im"><img src="img/flores.jpg" alt="Ambiente acolhedor com flores secas e luz natural" loading="lazy"></div></article>
+  </div>
+</div></section>
+
+<section class="pad" id="maria-clara" style="padding-top:0"><div class="wrap mc">
+  <div class="mcim rv"><div class="a"><img id="mi1" src="img/mc-retrato.jpg" alt="Maria Clara, fisioterapeuta do Valenza" loading="lazy" style="object-position:55% 30%"></div><div class="b"><img id="mi2" src="img/mc-sorriso.jpg" alt="Maria Clara sorrindo" loading="lazy" style="object-position:50% 25%"></div><span class="sig">Maria Clara</span></div>
+  <div class="tx">
+    <span class="eb rv"><b>05</b>Por trás da fisioterapia</span>
+    <h2 class="rv d1">Conheça <span class="tt">Maria Clara.</span></h2>
+    <blockquote class="rv d2">Cuidado individual, mais movimento. É assim que eu acredito que a fisioterapia deve ser.</blockquote>
+    <p class="rv d2">Fisioterapeuta do Valenza, Maria Clara une o Pilates Clássico à fisioterapia traumato-ortopédica para oferecer um atendimento atento, individualizado e acolhedor, com foco em reabilitação e bem-estar.</p>
+    <div class="cta rv d3"><a class="btn t wa" href="#" data-msg="Olá, Maria Clara! Vim pelo site e gostaria de agendar uma avaliação."><svg><use href="#i-wa"/></svg>Falar com a Maria Clara</a><a class="btn l" href="https://www.instagram.com/mariaclarafisioo/" target="_blank" rel="noopener">@mariaclarafisioo</a></div>
+  </div>
+</div></section>
+
+<section class="pad" style="padding-top:0"><div class="wrap">
+  <div class="sh"><div class="l"><span class="eb rv"><b>06</b>No Instagram</span><h2 class="rv d1">O clima do <span class="tt">Valenza.</span></h2></div></div>
+  <div class="ig rv">
+    <a href="https://www.instagram.com/valenza.pilates/" target="_blank" rel="noopener"><img src="img/studio.jpg" alt="Studio Valenza" loading="lazy"></a>
+    <a href="https://www.instagram.com/valenza.pilates/" target="_blank" rel="noopener"><img src="img/pose.jpg" alt="Alongamento no studio" loading="lazy"></a>
+    <a href="https://www.instagram.com/valenza.pilates/" target="_blank" rel="noopener"><img src="img/flores.jpg" alt="Detalhe do ambiente" loading="lazy"></a>
+    <a href="https://www.instagram.com/valenza.pilates/" target="_blank" rel="noopener"><img src="img/mc-sorriso.jpg" alt="Maria Clara" loading="lazy" style="object-position:50% 25%"></a>
+    <a href="https://www.instagram.com/valenza.pilates/" target="_blank" rel="noopener"><img src="img/bota-sofa.jpg" alt="Bota pneumática" loading="lazy"></a>
+  </div>
+  <div class="igh rv"><div class="h"><img src="img/logo.png" alt=""><div><b>@valenza.pilates</b><small>3.416 seguidores · 37 posts</small></div></div><a class="btn l" href="https://www.instagram.com/valenza.pilates/" target="_blank" rel="noopener">Seguir no Instagram <span class="ar">→</span></a></div>
+</div></section>
+
+<section class="ag pad" id="agendar"><div class="wrap agg">
+  <div class="tx">
+    <span class="eb rv"><b>07</b>Agende</span>
+    <h2 class="rv d1">Que tal se sentir <em>mais leve?</em></h2>
+    <p class="rv d2">Escolha o que procura e o melhor período. A mensagem chega pronta no WhatsApp do Valenza.</p>
+  </div>
+  <form class="form rv d1" id="agF">
+    <div class="f"><label for="aN">Seu nome</label><input id="aN" autocomplete="name" placeholder="Como podemos te chamar?"></div>
+    <div class="f"><span class="lb">Tenho interesse em</span><div class="ch2" data-k="s"><button type="button" class="on">Pilates Clássico</button><button type="button">Fisioterapia</button><button type="button">Drenagem linfática</button><button type="button">Bota pneumática</button><button type="button">Lipedema</button></div></div>
+    <div class="f"><span class="lb">Melhor período</span><div class="ch2" data-k="p"><button type="button" class="on">Manhã</button><button type="button">Tarde</button><button type="button">Noite</button></div></div>
+    <button class="btn t" type="submit"><svg><use href="#i-wa"/></svg>Enviar pelo WhatsApp <span class="ar">→</span></button>
+  </form>
+</div></section>
+
+<section class="pad"><div class="wrap faq">
+  <div style="display:flex;flex-direction:column;gap:20px"><span class="eb rv"><b>08</b>Dúvidas</span><h2 class="rv d1">Perguntas <span class="tt">frequentes.</span></h2><p class="rv d2" style="color:var(--mid);font-weight:300">Pergunte também à assistente virtual, no canto da tela.</p></div>
+  <div class="rv d1" id="faq">
+    <div class="qa on"><button aria-expanded="true"><span class="n">01</span><span class="q">O que é Pilates Clássico?</span><span class="pl"></span></button><div class="an"><div><p>É o Pilates fiel aos princípios originais do método, com sequências e aparelhos clássicos, trabalhando controle, centro, respiração e precisão.</p></div></div></div>
+    <div class="qa"><button aria-expanded="false"><span class="n">02</span><span class="q">Nunca fiz Pilates. Posso começar?</span><span class="pl"></span></button><div class="an"><div><p>Claro! O atendimento é individualizado e começa com uma avaliação para adaptar os exercícios ao seu momento.</p></div></div></div>
+    <div class="qa"><button aria-expanded="false"><span class="n">03</span><span class="q">A bota pneumática trata o lipedema?</span><span class="pl"></span></button><div class="an"><div><p>Ela não elimina a gordura do lipedema. É um recurso complementar que, quando indicado, pode aliviar a sensação de peso, o desconforto e o inchaço associado. A indicação é individual, após avaliação.</p></div></div></div>
+    <div class="qa"><button aria-expanded="false"><span class="n">04</span><span class="q">Quais os valores e horários?</span><span class="pl"></span></button><div class="an"><div><p>Valores, planos e horários disponíveis são informados pelo WhatsApp. O studio atende com hora marcada, até as 20h.</p></div></div></div>
+    <div class="qa"><button aria-expanded="false"><span class="n">05</span><span class="q">Onde fica o Valenza?</span><span class="pl"></span></button><div class="an"><div><p>R. Pascoal Lopes, 165, Santo Antônio, Garanhuns - PE. Veja o mapa logo abaixo.</p></div></div></div>
+  </div>
+</div></section>
+
+<section id="contato" style="padding-bottom:clamp(80px,10vw,130px)"><div class="wrap">
+  <div class="sh"><div class="l"><span class="eb rv"><b>09</b>Contato</span><h2 class="rv d1">Venha nos <span class="tt">visitar.</span></h2></div></div>
+  <div class="loc rv">
+    <div class="info">
+      <div class="li"><small>Endereço</small><span>R. Pascoal Lopes, 165<br>Santo Antônio · Garanhuns - PE<br>55294-490</span></div>
+      <div class="li"><small>Atendimento</small><span>Com hora marcada, até as 20h</span></div>
+      <div class="li"><small>WhatsApp</small><a class="wa" href="#" data-msg="Olá, Valenza! Vim pelo site.">(87) 98159-2039</a></div>
+      <div class="li" style="border:0;padding:0"><small>Instagram</small><a href="https://www.instagram.com/valenza.pilates/" target="_blank" rel="noopener">@valenza.pilates</a></div>
+      <div class="cta"><a class="btn t" href="https://www.google.com/maps/dir/?api=1&destination=Valenza+Pilates+e+Fisioterapia,+R.+Pascoal+Lopes,+165,+Santo+Ant%C3%B4nio,+Garanhuns+-+PE" target="_blank" rel="noopener">Como chegar <span class="ar">→</span></a><a class="btn l" href="https://waze.com/ul?q=R.%20Pascoal%20Lopes%20165%20Garanhuns&navigate=yes" target="_blank" rel="noopener">Waze</a></div>
+    </div>
+    <div class="map"><iframe title="Mapa do Valenza Pilates e Fisioterapia" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=R.+Pascoal+Lopes,+165,+Santo+Ant%C3%B4nio,+Garanhuns+-+PE,+55294-490&output=embed"></iframe></div>
+  </div>
+</div></section>
+
+<section class="final" id="final" style="background:var(--paper);border-top:1px solid var(--line)">
+  <span class="bigv" id="bigv" aria-hidden="true">V</span>
+  <div class="wrap">
+    <span class="eb rv" style="justify-content:center"><b>10</b>Até breve</span>
+    <h2 class="rv d1">Gostou deste <em>cuidado?</em></h2>
+    <p class="rv d2">Seu cuidado começa com uma mensagem. Agende sua avaliação no Valenza.</p>
+    <div class="icons rv d2">
+      <a class="wa" href="#" data-msg="Olá, Valenza! Vim pelo site e quero agendar."><span><svg><use href="#i-wa"/></svg></span>Agende</a>
+      <a href="https://www.instagram.com/valenza.pilates/" target="_blank" rel="noopener"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></span>Siga</a>
+      <a href="#" id="shr"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M21 3 3 10l7 3 3 7Z"/><path d="m10 13 4-4"/></svg></span>Compartilhe</a>
+      <a href="#contato"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>Visite</a>
+    </div>
+  </div>
+</section>
+<footer><div class="wrap"><span class="wm">VALENZA</span><span>© <span id="yr">2026</span> Valenza · Pilates e Fisioterapia · Garanhuns - PE</span><a class="wa" href="#" data-msg="Olá, Valenza! Vim pelo site.">(87) 98159-2039</a></div></footer>
+
+<button class="abt" id="ab" aria-expanded="false" aria-controls="as"><span class="av">V</span><span><b>Assistente Valenza</b><small>Tire suas dúvidas agora</small></span></button>
+<div class="as" id="as" hidden role="dialog" aria-label="Assistente virtual">
+  <header><span class="av">V</span><div><b>Assistente Valenza</b><small>Online agora</small></div><button id="asX" aria-label="Fechar">×</button></header>
+  <div class="msgs" id="msgs" aria-live="polite"></div>
+  <div class="qk" id="qk"></div>
+  <form id="asF"><input id="asI" placeholder="Escreva sua dúvida…" autocomplete="off" aria-label="Sua pergunta" maxlength="200"><button aria-label="Enviar"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5 21 12 3 3.5v6.6l12 1.9-12 1.9Z"/></svg></button></form>
+</div>
+
+<script>
+document.documentElement.classList.add('js');
+const WA='5587981592039', wa=m=>'https://wa.me/'+WA+'?text='+encodeURIComponent(m);
+const bindWA=r=>r.querySelectorAll('.wa').forEach(a=>{a.href=wa(a.dataset.msg||'Olá, Valenza! Vim pelo site.');a.target='_blank';a.rel='noopener'});
+bindWA(document);document.getElementById('yr').textContent=new Date().getFullYear();
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches, fine=matchMedia('(hover:hover)').matches;
+
+// abertura: o V é escrito, as letras de VALENZA acendem
+(function(){const L=document.getElementById('loader'),N=document.getElementById('ldN'),V=document.getElementById('ldV'),B=document.getElementById('ldB'),W=[...document.querySelectorAll('#ldW span')];const dur=reduce?200:2700,t0=performance.now();let fin=false;
+  function f(t){const p=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-p,2.2),v=Math.round(e*100);N.textContent=String(v).padStart(3,'0');V.style.setProperty('--p',v+'%');B.style.setProperty('--s',e);W.forEach((s,i)=>s.classList.toggle('on',e>=(i+1)/W.length-.02));if(p<1)requestAnimationFrame(f);else setTimeout(done,420)}
+  function done(){if(fin)return;fin=true;L.classList.add('go');document.body.classList.remove('loading');document.body.classList.add('ready');setTimeout(()=>L.remove(),1200)}
+  requestAnimationFrame(f);setTimeout(done,5600)})();
+
+(function(){const t=document.getElementById('mq');t.innerHTML+=t.innerHTML})();
+
+// rolagem
+const nav=document.getElementById('nav'),himg=document.getElementById('himg'),mi1=document.getElementById('mi1'),mi2=document.getElementById('mi2'),bigv=document.getElementById('bigv'),scs=[...document.querySelectorAll('.sc')];
+function par(el,k){const r=el.getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight)el.style.setProperty('--py',((r.top+r.height/2-innerHeight/2)*k)+'px')}
+function onScroll(){const y=scrollY;nav.classList.toggle('solid',y>30);if(reduce)return;if(y<innerHeight)himg.style.setProperty('--py',(y*.08)+'px');par(mi1,-.05);par(mi2,.06);
+  const r=bigv.parentElement.getBoundingClientRect();if(r.top<innerHeight&&r.bottom>0)bigv.style.setProperty('--sv',.8+Math.min(1,(innerHeight-r.top)/(r.height+innerHeight))*.4);
+  scs.forEach((c,i)=>{const n=scs[i+1];if(!n)return;const nr=n.getBoundingClientRect(),cr=c.getBoundingClientRect();const p=Math.min(1,Math.max(0,1-(nr.top-cr.top)/cr.height));c.style.transform='scale('+(1-p*.05)+')';c.style.filter='brightness('+(1-p*.08)+')'})}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv,.wp').forEach(x=>io.observe(x));
+
+// carrossel arrastável estilo post
+(function(){const S=document.getElementById('slides'),sl=[...S.children],dots=document.getElementById('dots'),cI=document.getElementById('cI');document.getElementById('cT').textContent=String(sl.length).padStart(2,'0');
+  dots.innerHTML=sl.map(()=>'<i></i>').join('');const ds=[...dots.children];
+  const step=()=>sl[0].offsetWidth+18;
+  function upd(){const i=Math.min(sl.length-1,Math.round(S.scrollLeft/step()));cI.textContent=String(i+1).padStart(2,'0');ds.forEach((d,k)=>d.classList.toggle('on',k===i))}
+  S.addEventListener('scroll',upd,{passive:true});upd();
+  document.getElementById('cPrev').onclick=()=>S.scrollBy({left:-step(),behavior:'smooth'});document.getElementById('cNext').onclick=()=>S.scrollBy({left:step(),behavior:'smooth'});
+  let down=false,sx=0,sl0=0,moved=false;S.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse')return;down=true;moved=false;sx=e.clientX;sl0=S.scrollLeft;S.classList.add('drag')});
+  addEventListener('pointermove',e=>{if(!down)return;const dx=e.clientX-sx;if(Math.abs(dx)>4)moved=true;S.scrollLeft=sl0-dx});
+  addEventListener('pointerup',()=>{if(!down)return;down=false;S.classList.remove('drag');S.scrollTo({left:Math.round(S.scrollLeft/step())*step(),behavior:'smooth'})});
+  S.addEventListener('click',e=>{if(moved){e.preventDefault();e.stopPropagation()}},true)})();
+
+// bota: câmaras enchem em sequência
+(function(){const ch=[...document.querySelectorAll('#boot .ch')].reverse();let i=0,vis=false;new IntersectionObserver(e=>vis=e[0].isIntersecting).observe(document.getElementById('boot'));
+  setInterval(()=>{if(!vis&&!reduce)return;if(i<ch.length){ch[i].classList.add('on');i++}else{ch.forEach(c=>c.classList.remove('on'));i=0}},reduce?99999:550)})();
+
+// agendar
+(function(){document.querySelectorAll('.ch2').forEach(o=>{const bs=[...o.children];bs.forEach(b=>b.onclick=()=>bs.forEach(x=>x.classList.toggle('on',x===b)))});
+  document.getElementById('agF').onsubmit=e=>{e.preventDefault();const g=k=>document.querySelector('.ch2[data-k="'+k+'"] .on').textContent,n=document.getElementById('aN').value.trim();open(wa('Olá, Valenza!'+(n?' Sou '+n+'.':'')+' Gostaria de agendar uma avaliação.\n• Interesse: '+g('s')+'\n• Melhor período: '+g('p')),'_blank','noopener')}})();
+
+// compartilhar
+document.getElementById('shr').onclick=e=>{e.preventDefault();const d={title:'Valenza · Pilates e Fisioterapia',url:location.href};if(navigator.share)navigator.share(d).catch(()=>{});else if(navigator.clipboard){navigator.clipboard.writeText(location.href).then(()=>{e.currentTarget&&0;const s=document.getElementById('shr');const o=s.lastChild.textContent;s.lastChild.textContent='Link copiado!';setTimeout(()=>s.lastChild.textContent=o,1800)}).catch(()=>{})}};
+
+// FAQ
+(function(){const it=[...document.querySelectorAll('.qa')];it.forEach(q=>q.querySelector('button').onclick=()=>{const o=!q.classList.contains('on');it.forEach(x=>{x.classList.remove('on');x.querySelector('button').setAttribute('aria-expanded','false')});if(o){q.classList.add('on');q.querySelector('button').setAttribute('aria-expanded','true')}})})();
+
+// magnético
+if(fine&&!reduce)document.querySelectorAll('.btn').forEach(b=>{b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();b.style.setProperty('--x',(e.clientX-r.left-r.width/2)*.1+'px');b.style.setProperty('--y',(e.clientY-r.top-r.height/2)*.2+'px')});b.addEventListener('pointerleave',()=>{b.style.setProperty('--x','0px');b.style.setProperty('--y','0px')})});
+
+// assistente virtual
+(function(){const norm=t=>t.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-z0-9 ]/g,' ');
+  const lev=(a,b)=>{const m=[];for(let i=0;i<=a.length;i++){m[i]=[i];for(let j=1;j<=b.length;j++)m[i][j]=i?Math.min(m[i-1][j]+1,m[i][j-1]+1,m[i-1][j-1]+(a[i-1]===b[j-1]?0:1)):j}return m[a.length][b.length]};
+  const KB=[
+   {q:'Como agendar?',k:['agendar','agenda','marcar','avaliacao','matricula','comecar','aula experimental'],a:'É só chamar no <b>WhatsApp (87) 98159-2039</b> ou usar o <a href="#agendar">formulário</a> aqui no site. O atendimento é com hora marcada.',w:'Olá, Valenza! Gostaria de agendar uma avaliação.'},
+   {q:'Lipedema',k:['lipedema','lipo','gordura','celulite'],a:'No lipedema, a drenagem linfática e a bota pneumática podem integrar o cuidado, <b>conforme avaliação</b>. Elas não eliminam a gordura do lipedema: são recursos complementares para aliviar os sintomas.',w:'Olá, Valenza! Gostaria de saber sobre o cuidado para lipedema.'},
+   {q:'Bota pneumática',k:['bota','pneumatica','pressoterapia','compressao','perna pesada','pernas pesadas','inchaco','inchasso','incha','retencao'],a:'A <b>bota pneumática</b> tem câmaras que enchem e esvaziam em sequência, auxiliando o retorno venoso e linfático. Quando indicada, pode aliviar a sensação de peso e o inchaço. <a href="#bota">Ver como funciona →</a>',w:'Olá, Valenza! Gostaria de saber sobre a bota pneumática.'},
+   {q:'Pilates Clássico',k:['pilates','classico','aparelho','reformer','cadillac','alongar','flexibilidade','fortalecer'],a:'O <b>Pilates Clássico</b> segue os princípios originais do método: controle, centro, respiração e precisão. O atendimento é individualizado.',w:'Olá, Valenza! Tenho interesse no Pilates Clássico.'},
+   {q:'Fisioterapia',k:['fisio','fisioterapia','traumato','ortopedica','lesao','dor','coluna','joelho','ombro','costas','lombar','hernia','cirurgia'],a:'O Valenza oferece <b>Fisioterapia traumato-ortopédica</b> para dores, lesões e recuperação de movimentos, com avaliação e plano individual.',w:'Olá, Valenza! Gostaria de saber sobre a fisioterapia.'},
+   {q:'Drenagem linfática',k:['drenagem','linfatica','leveza','desinchar'],a:'A <b>drenagem linfática</b> estimula a circulação linfática e traz sensação de leveza. Pode ser combinada com a bota pneumática, conforme avaliação.',w:'Olá, Valenza! Tenho interesse em drenagem linfática.'},
+   {q:'Nunca fiz Pilates',k:['nunca fiz','iniciante','primeira vez','sedentari','idade','idoso','idosa','consigo'],a:'Pode começar sem medo! O atendimento é <b>individualizado</b> e começa com uma avaliação para adaptar tudo ao seu momento.',w:'Olá, Valenza! Nunca fiz Pilates e gostaria de começar.'},
+   {q:'Valores',k:['valor','preco','quanto','custa','plano','mensalidade','pacote','pagamento','pix','cartao'],a:'Os <b>valores e planos</b> são informados pelo WhatsApp, de acordo com o serviço e a frequência.',w:'Olá, Valenza! Gostaria de saber os valores.'},
+   {q:'Horários',k:['horario','hora','abre','fecha','funciona','sabado','domingo','noite','manha','tarde'],a:'O atendimento é <b>com hora marcada, até as 20h</b>. Confirme os horários disponíveis pelo WhatsApp.',w:'Olá, Valenza! Quais horários vocês têm disponíveis?'},
+   {q:'Onde fica?',k:['onde','endereco','fica','local','rua','bairro','santo antonio','chegar'],a:'📍 <b>R. Pascoal Lopes, 165, Santo Antônio</b>, Garanhuns - PE. <a href="#contato">Ver no mapa →</a>'},
+   {q:'Quem atende?',k:['quem','maria clara','fisioterapeuta','profissional','professora'],a:'No Valenza, você é atendido pela fisioterapeuta <b>Maria Clara</b> (@mariaclarafisioo), com atendimento individualizado.',w:'Olá, Maria Clara! Vim pelo site.'}];
+  const SM=[{k:['oi','ola','bom dia','boa tarde','boa noite','opa','eae'],a:'Olá! 🤎 Posso te ajudar com Pilates, fisioterapia, bota pneumática, lipedema, valores, horários e endereço.'},{k:['obrigad','valeu','brigad'],a:'Por nada! Te esperamos no Valenza. 🤎'}];
+  const msgs=document.getElementById('msgs'),qk=document.getElementById('qk'),as=document.getElementById('as'),ab=document.getElementById('ab');
+  const add=(h,c)=>{const d=document.createElement('div');d.className='m '+c;d.innerHTML=h;msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;d.querySelectorAll('a[href^="#"]').forEach(a=>a.onclick=()=>{if(innerWidth<700)toggle(false)})};
+  function score(e,n){const ws=n.split(/\s+/).filter(w=>w.length>=4);let s=0;e.k.forEach(k=>{if(n.includes(k))s+=2;else if(k.length>=4&&!k.includes(' ')&&ws.some(w=>lev(w,k)<=1||(k.length>=6&&lev(w.slice(0,k.length),k)<=1)))s+=1});return s}
+  function reply(t){const n=' '+norm(t)+' ';const ex=KB.find(e=>e.q===t);if(ex)return ex;if(n.trim().length<16){const g=SM.find(e=>e.k.some(k=>n.includes(' '+k)));if(g)return g}let best=null,sc=0;KB.forEach(e=>{const s=score(e,n);if(s>sc){sc=s;best=e}});if(best)return best;return SM.find(e=>e.k.some(k=>n.includes(' '+k)))||null}
+  function ask(t){add(t.replace(/</g,'&lt;'),'u');const ty=document.createElement('div');ty.className='m b typing';ty.style.opacity=1;ty.innerHTML='<i></i><i></i><i></i>';msgs.appendChild(ty);msgs.scrollTop=msgs.scrollHeight;
+    setTimeout(()=>{ty.remove();const r=reply(t);if(r)add(r.a+(r.w?'<br><a href="'+wa(r.w)+'" target="_blank" rel="noopener">Continuar no WhatsApp →</a>':''),'b');
+      else add('Essa a nossa equipe responde melhor! <a href="'+wa('Olá, Valenza! Vim pelo site e tenho uma dúvida: '+t)+'" target="_blank" rel="noopener">Enviar no WhatsApp →</a>','b')},700)}
+  KB.slice(0,8).forEach(e=>{const b=document.createElement('button');b.type='button';b.textContent=e.q;b.onclick=()=>ask(e.q);qk.appendChild(b)});
+  let hi=false;function toggle(o){as.hidden=!o;ab.setAttribute('aria-expanded',o);if(o&&!hi){hi=true;add('Olá! Sou a assistente virtual do <b>Valenza · Pilates e Fisioterapia</b>. 🤎 Como posso te ajudar?','b')}if(o&&fine)document.getElementById('asI').focus()}
+  ab.onclick=()=>toggle(as.hidden);document.getElementById('asX').onclick=()=>toggle(false);addEventListener('keydown',e=>{if(e.key==='Escape')toggle(false)});
+  document.getElementById('asF').onsubmit=e=>{e.preventDefault();const i=document.getElementById('asI');if(i.value.trim()){ask(i.value.trim());i.value=''}}})();
+</script>
+</body>
+</html>
